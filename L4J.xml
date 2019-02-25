@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch4jConfig>
+  <dontWrapJar>false</dontWrapJar>
+  <headerType>gui</headerType>
+  <jar>C:\Users\jag_m\Documents\NetBeansProjects\EditJudgeAssignments\dist\EditJudgeAssignments.jar</jar>
+  <outfile>C:\Users\jag_m\Documents\NetBeansProjects\EditJudgeAssignments\dist\ConcoursBuilder.exe</outfile>
+  <errTitle></errTitle>
+  <cmdLine></cmdLine>
+  <chdir>.</chdir>
+  <priority>normal</priority>
+  <downloadUrl>http://java.com/download</downloadUrl>
+  <supportUrl></supportUrl>
+  <stayAlive>false</stayAlive>
+  <restartOnCrash>false</restartOnCrash>
+  <manifest></manifest>
+  <icon></icon>
+  <singleInstance>
+    <mutexName>ABC9227A-1DEB-458C-BD16-2B7DFC211489</mutexName>
+    <windowTitle>JCNA ConcoursBuilder</windowTitle>
+  </singleInstance>
+  <jre>
+    <path></path>
+    <bundledJre64Bit>false</bundledJre64Bit>
+    <bundledJreAsFallback>false</bundledJreAsFallback>
+    <minVersion>1.8.0_25</minVersion>
+    <maxVersion></maxVersion>
+    <jdkPreference>preferJre</jdkPreference>
+    <runtimeBits>32/64</runtimeBits>
+  </jre>
+  <splash>
+    <file>C:\Users\JAG_M\Pictures\EdsXJSCropped.bmp</file>
+    <waitForWindow>true</waitForWindow>
+    <timeout>120</timeout>
+    <timeoutErr>false</timeoutErr>
+  </splash>
+  <messages>
+    <startupErr>An error occurred while starting the application. Possibly timeout.</startupErr>
+    <bundledJreErr>This application was configured to use a bundled Java Runtime Environment but the runtime is missing or corrupted.</bundledJreErr>
+    <jreVersionErr>This application requires a Java Runtime Environment</jreVersionErr>
+    <launcherErr>The registry refers to a nonexistent Java Runtime Environment installation or the runtime is corrupted.</launcherErr>
+    <instanceAlreadyExistsMsg>An application instance is already running.</instanceAlreadyExistsMsg>
+  </messages>
+</launch4jConfig>

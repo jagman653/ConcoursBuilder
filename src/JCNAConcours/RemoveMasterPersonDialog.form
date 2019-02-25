@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.8" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JDialogFormInfo">
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="2"/>
+    <Property name="title" type="java.lang.String" value="Remove Master Persons"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" attributes="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="86" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="2" attributes="0">
+                          <Component id="cboAvailableMPs" alignment="2" min="-2" pref="197" max="-2" attributes="0"/>
+                          <Component id="jLabel4" alignment="2" min="-2" max="-2" attributes="0"/>
+                          <Component id="jScrollPane1" alignment="2" min="-2" pref="196" max="-2" attributes="0"/>
+                          <Component id="jLabel12" alignment="2" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="btnAddToRemoveList" max="32767" attributes="0"/>
+                          <Component id="btnAddBack" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="108" max="-2" attributes="0"/>
+                      <Component id="btnRemoveAll" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="98" max="-2" attributes="0"/>
+                      <Component id="btnCancel" min="-2" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace pref="58" max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+              <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="cboAvailableMPs" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnAddToRemoveList" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
+              <Component id="jLabel12" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="jScrollPane1" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
+                      <Component id="btnAddBack" min="-2" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="btnCancel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnRemoveAll" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace pref="22" max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Component class="javax.swing.JLabel" name="jLabel4">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Master Person list"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="cboAvailableMPs">
+      <Properties>
+        <Property name="editable" type="boolean" value="true"/>
+        <Property name="toolTipText" type="java.lang.String" value="Select Master Person to be removed from Master Personnel list. Note: Master Persons who are active in th current Concours have been omitted since they cannot be removed."/>
+      </Properties>
+      <Events>
+        <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="cboAvailableMPsItemStateChanged"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cboAvailableMPsActionPerformed"/>
+      </Events>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JComboBox();// GUI builder will insert the preceding left side&#xa;// Initialize eventListOfAvaiableMPs to nonConcoursMasterPersonsList from repository&#xa;eventListOfAvaiableMPs = GlazedLists.eventList(nonConcoursMasterPersonsList);&#xa;// Note that sortedAvailableMPs will automatically update when the source, eventListOfAvaiableMPs, is changed&#xa;EventList&lt;MasterPersonExt&gt; sortedAvailableMPs = new SortedList&lt;&gt;(eventListOfAvaiableMPs, MasterPersonExt.Comparators.UNIQUENAME);&#xa;&#xa;// custom filterator&#xa;TextFilterator&lt;MasterPersonExt&gt; textFilterator = GlazedLists.textFilterator(MasterPersonExt.class, &quot;uniqueName&quot;);&#xa;// set Autocompletion support&#xa;AutoCompleteSupport support = AutoCompleteSupport.install(this.cboAvailableMPs, sortedAvailableMPs, textFilterator, new MemberInfoFormat());&#xa;support.setStrict(true);&#xa;        &#xa;"/>
+        <AuxValue name="JavaCodeGenerator_CreateCodePre" type="java.lang.String" value="// Custom code to help GUI Builder do the GlazedList stuff&#xa;// Note that GUIBuilder insists on putting in the &quot;cboAvailableMPs =&quot;"/>
+        <AuxValue name="JavaCodeGenerator_DeclarationPre" type="java.lang.String" value="// Custom code... pre-declaration section&#xa;    //private EventList&lt;MasterPersonExt&gt; allMasterPersons; // repository of MasterPersons&#xa;    private EventList&lt;MasterPersonExt&gt; eventListOfAvaiableMPs;&#xa;    private EventList&lt;MasterPersonExt&gt; eventListOfToBeRemovedMPs; // EventList to be associated with JList lstBoxRemoveList&#xa;    // End Custom  pre-declaration section"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnAddToRemoveList">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Add to remove list"/>
+        <Property name="toolTipText" type="java.lang.String" value="Puts selected Master Person  into the Remove list"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAddToRemoveListActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnRemoveAll">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Remove all"/>
+        <Property name="toolTipText" type="java.lang.String" value="Removes all Master Persons in Remove list &amp; retuns to the main ConcoursBuilder dialog."/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseDragged" listener="java.awt.event.MouseMotionListener" parameters="java.awt.event.MouseEvent" handler="btnRemoveAllMouseDragged"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRemoveAllActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnCancel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Cancel"/>
+        <Property name="toolTipText" type="java.lang.String" value="Returns to ConcoursBuilder main dialog without  removal of any Master Persons"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCancelActionPerformed"/>
+      </Events>
+    </Component>
+    <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+      <AuxValues>
+        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+      </AuxValues>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+      <SubComponents>
+        <Component class="javax.swing.JList" name="lstBoxRemoveList">
+          <Properties>
+            <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+              <Connection code="lstBoxRemoveListModel" type="code"/>
+            </Property>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="&#xa;"/>
+            <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="// Initialize eventListOfToBeRemovedMPs as an empty BasicEventList of MasterPersonExt&#xd;&#xa;eventListOfToBeRemovedMPs = new BasicEventList&lt;&gt;();&#xd;&#xa;// Set the Model for  JList lstBoxSelected&#xd;&#xa;DefaultEventListModel lstBoxRemoveListModel = new DefaultEventListModel(eventListOfToBeRemovedMPs); "/>
+          </AuxValues>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Component class="javax.swing.JLabel" name="jLabel12">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Remove list"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnAddBack">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Add back"/>
+        <Property name="toolTipText" type="java.lang.String" value="Moves selection  on Remove list back to Master Persons list."/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAddBackActionPerformed"/>
+      </Events>
+    </Component>
+  </SubComponents>
+</Form>
